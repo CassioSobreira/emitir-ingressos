@@ -10,6 +10,7 @@
 <body>
 
     <header>
+        <img src="images/logo-full.svg" alt="Ícone do Evento">
         <h1>Sua Jornada para a Coding Conf 2025 Começa Aqui!</h1>
         <p>Garanta seu lugar na maior conferência de programação do próximo ano.</p>
     </header>
@@ -17,39 +18,40 @@
     <main>
         <form action="confirmação.html" method="get">
             
-            <div>
-                <label for="avatar">Enviar Avatar</label><br>
-                <input type="file" id="avatar" name="avatar" accept="image/jpeg, image/png">
-                <p><small>Envie sua foto (JPG ou PNG, tamanho máximo: 500KB).</small></p>
+            <div class="form-group">
+                <label>Enviar Avatar</label>
+                <label for="avatar" id="drop-area">
+                    <div id="drop-area-content">
+                        <img src="images/icon-upload.svg" alt="Ícone de Upload">
+                        <p>Arraste e solte ou clique para enviar</p>
+                        <span>Envie sua foto (JPG ou PNG, tamanho máx: 5MB).</span>
+                    </div>
+                    <input type="file" id="avatar" name="avatar" accept="image/jpeg, image/png" hidden>
+                </label>
             </div>
             
-            <br>
-
-            <div>
-                <label for="nomeCompleto">Nome Completo</label><br>
-                <input type="text" id="nomeCompleto" name="nomeCompleto">
+            <div class="form-group">
+                <label for="nomeCompleto">Nome Completo</label>
+                <input type="text" id="nomeCompleto" name="nomeCompleto" required>
             </div>
 
-            <br>
-
-            <div>
-                <label for="email">Endereço de Email</label><br>
-                <input type="email" id="email" name="email" placeholder="exemplo@email.com">
+            <div class="form-group">
+                <label for="email">Endereço de Email</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
             </div>
 
-            <br>
-
-            <div>
-                <label for="github">Usuário do GitHub</label><br>
-                <input type="text" id="github" name="github" placeholder="@seunomedeusuario">
+            <div class="form-group">
+                <label for="github">Usuário do GitHub</label>
+                <input type="text" id="github" name="github" placeholder="@seunomedeusuario" required>
             </div>
             
-            <br>
-
-            <div>
-                <button type="submit">Gerar Meu Ingresso</button>
-            </div>
+            <button type="submit">Gerar Meu Ingresso</button>
 
         </form>
     </main>
+
+    <script src="uploader.js"></script>
+
+</body>
+</html>
 

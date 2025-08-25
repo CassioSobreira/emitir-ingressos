@@ -1,14 +1,247 @@
+/* ============================================= */
+/* GERAL E VARIÁVEIS                           */
+/* ============================================= */
+
+/* Define as cores principais para reutilizarmos */
+:root {
+  --cor-fundo-escuro: #100f1c;
+  --cor-principal-laranja: #ff8a71;
+  --cor-texto-principal: #ffffff;
+  --cor-texto-secundario: #a3a3b3;
+  --cor-fundo-input: rgba(255, 255, 255, 0.05);
+  --cor-borda-input: rgba(255, 255, 255, 0.2);
+  --cor-fundo-ticket: rgba(122, 91, 222, 0.15);
+  --cor-borda-ticket: rgba(122, 91, 222, 0.5);
+}
+
+/* Reset básico e estilos do body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  /* --- Estilos que já tínhamos --- */
-  background-color: #1a1a2e;
-  color: white; 
-  font-family: sans-serif; /* Adicionei uma fonte padrão para melhor legibilidade */
+  background-color: var(--cor-fundo-escuro);
+  /* SUBSTITUA 'fundo-linhas.svg' PELO NOME CORRETO DO SEU ARQUIVO */
+  background-image: url('images/fundo-linhas.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 
-  /* --- Código para centralização --- */
+  color: var(--cor-texto-principal);
+  /* SUBSTITUA 'Sora' PELO NOME DA FONTE DO SEU ZIP */
+  font-family: 'Sora', sans-serif;
+
+  /* Layout Flexbox para centralizar tudo */
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh; /* Garante que o body ocupe pelo menos a altura total da tela */
-  margin: 0; /* Remove margens padrão do navegador */
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Estilos de Tipografia */
+h1 {
+  font-size: 2.5rem; /* 40px */
+  line-height: 1.2;
+}
+
+h1 span, strong {
+  color: var(--cor-principal-laranja);
+}
+
+p {
+  color: var(--cor-texto-secundario);
+  font-size: 1rem; /* 16px */
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+
+/* ============================================= */
+/* PÁGINA DE INSCRIÇÃO (FORMULÁRIO)              */
+/* ============================================= */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header img {
+    margin-bottom: 32px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Espaço entre os elementos do formulário */
+  width: 100%;
+  max-width: 500px;
+}
+
+form label {
+  font-weight: 500;
+  margin-bottom: -8px; /* Aproxima o label do input */
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--cor-fundo-input);
+  border: 1px solid var(--cor-borda-input);
+  border-radius: 8px;
+  color: var(--cor-texto-principal);
+  font-size: 1rem;
+}
+
+input::placeholder {
+    color: var(--cor-texto-secundario);
+}
+
+button[type="submit"] {
+  padding: 16px;
+  background-color: var(--cor-principal-laranja);
+  color: var(--cor-fundo-escuro);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  transform: scale(1.02); /* Efeito de leve aumento */
+}
+
+/* ============================================= */
+/* PÁGINA DE CONFIRMAÇÃO (TICKET)                */
+/* ============================================= */
+main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.ticket-container {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 550px;
+}
+
+.ticket-container h2 {
+    margin-bottom: 16px;
+}
+
+.ticket {
+  display: flex;
+  background-color: var(--cor-fundo-ticket);
+  border: 1px solid var(--cor-borda-ticket);
+  border-radius: 16px;
+  backdrop-filter: blur(10px); /* Efeito de vidro fosco */
+  -webkit-backdrop-filter: blur(10px); /* Para compatibilidade */
+  overflow: hidden; /* Garante que os cantos fiquem arredondados */
+}
+
+.ticket-main {
+  padding: 32px;
+  flex-grow: 1; /* Faz esta parte ocupar o máximo de espaço */
+}
+
+.ticket-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+}
+
+.ticket-header h3 {
+    font-size: 1.25rem;
+}
+
+.ticket-logo-icon {
+    width: 40px;
+}
+
+.ticket-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+  text-align: left;
+}
+
+.user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Deixa o avatar redondo */
+}
+
+.user-info h4 {
+  font-size: 1.5rem; /* 24px */
+}
+
+.ticket-stub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-left: 2px dashed var(--cor-borda-ticket);
+  writing-mode: vertical-rl; /* Deixa o texto na vertical */
+  transform: rotate(180deg); /* Corrige a orientação do texto vertical */
+  padding: 24px 0;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+#drop-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background-color: var(--cor-fundo-input);
+  border: 2px dashed var(--cor-borda-input);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+#drop-area-content img {
+    margin-bottom: 16px;
+}
+
+#drop-area-content p {
+    color: var(--cor-texto-principal);
+    font-weight: 500;
+}
+
+#drop-area-content span {
+    font-size: 0.8rem;
+    color: var(--cor-texto-secundario);
+    margin-top: 8px;
+}
+
+/* Estilo para quando um arquivo é arrastado sobre a área */
+#drop-area.drag-over {
+  border-style: solid;
+  background-color: rgba(122, 91, 222, 0.2); /* Um roxo para feedback visual */
+}
+
+/* Estilo para a pré-visualização da imagem */
+#image-preview {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
 }

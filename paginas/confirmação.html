@@ -10,38 +10,41 @@
 <body>
 
     <header>
-        <p><strong>Coding Conf</strong></p>
+        <img src="images/logo-full.svg" alt="Ícone do Evento">
     </header>
 
     <main>
-        <h1>Parabéns, [Nome do Usuário]! Seu ingresso está pronto.</h1>
+        <h1>Parabéns, <span id="h1-nome-usuario">[Nome do Usuário]</span>! Seu ingresso está pronto.</h1>
+
         <p>
-            Enviamos seu ingresso por e-mail para <strong>[email-do-usuario@email.com]</strong> e mandaremos atualizações até a data do evento.
+            Enviamos seu ingresso por e-mail para <strong id="confirm-email">[email-do-usuario@email.com]</strong> e mandaremos atualizações até a data do evento.
         </p>
 
-        <hr> <section>
+        <section class="ticket-container">
             <h2>Seu Ingresso:</h2>
             
-            <div>
+            <div class="ticket">
                 
-                <div>
-                    <h3>Coding Conf</h3>
-                    <p>31 de Jan, 2025 / Austin, TX</p>
-                </div>
+                <div class="ticket-main">
+                    <div class="ticket-header">
+                        <img src="images/logo-icon.svg" alt="Ícone Coding Conf" class="ticket-logo-icon">
+                        <div>
+                            <h3>Coding Conf</h3>
+                            <p>31 de Jan, 2025 / Austin, TX</p>
+                        </div>
+                    </div>
 
-                <br>
-
-                <div>
-                    <img src="caminho-para-o-avatar.jpg" alt="Avatar de [Nome do Usuário]" width="100">
-                    
-                    <div>
-                        <h4>[Nome do Usuário]</h4>
-                        <p>@[usuario-github]</p>
+                    <div class="ticket-user">
+                        <img src="caminho-para-o-avatar.jpg" alt="Avatar do Usuário" id="ticket-avatar" class="user-avatar">
+                        <div class="user-info">
+                            <h4 id="ticket-nome">[Nome do Usuário]</h4>
+                            <p id="ticket-github">@[usuario-github]</p>
+                        </div>
                     </div>
                 </div>
 
-                <div>
-                    <p><strong>#01609</strong></p>
+                <div class="ticket-stub">
+                    <p id="ticket-number">#01609</p>
                 </div>
 
             </div>
@@ -49,5 +52,7 @@
         
     </main>
 
+    <script src="script.js"></script> 
+    
 </body>
 </html>
