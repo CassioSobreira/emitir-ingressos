@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Página de Inscrição</title>
+</head>
+<body>
+
+    <header>
+        <h1>Sua Jornada para a Coding Conf 2025 Começa Aqui!</h1>
+        <p>Garanta seu lugar na maior conferência de programação do próximo ano.</p>
+    </header>
+
+    <main>
+        <form action="confirmação.html" method="get">
+            
+            <div>
+                <label for="avatar">Enviar Avatar</label><br>
+                <input type="file" id="avatar" name="avatar" accept="image/jpeg, image/png">
+                <p><small>Envie sua foto (JPG ou PNG, tamanho máximo: 500KB).</small></p>
+            </div>
+            
+            <br>
+
+            <div>
+                <label for="nomeCompleto">Nome Completo</label><br>
+                <input type="text" id="nomeCompleto" name="nomeCompleto">
+            </div>
+
+            <br>
+
+            <div>
+                <label for="email">Endereço de Email</label><br>
+                <input type="email" id="email" name="email" placeholder="exemplo@email.com">
+            </div>
+
+            <br>
+
+            <div>
+                <label for="github">Usuário do GitHub</label><br>
+                <input type="text" id="github" name="github" placeholder="@seunomedeusuario">
+            </div>
+            
+            <br>
+
+            <div>
+                <button type="submit">Gerar Meu Ingresso</button>
+            </div>
+
+        </form>
+    </main>
+

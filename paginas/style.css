@@ -1,0 +1,14 @@
+
+body {
+  /* --- Estilos que já tínhamos --- */
+  background-color: #1a1a2e;
+  color: white; 
+  font-family: sans-serif; /* Adicionei uma fonte padrão para melhor legibilidade */
+
+  /* --- Código para centralização --- */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; /* Garante que o body ocupe pelo menos a altura total da tela */
+  margin: 0; /* Remove margens padrão do navegador */
+}
