@@ -24,7 +24,7 @@
 body {
   background-color: var(--cor-fundo-escuro);
   /* SUBSTITUA 'fundo-linhas.svg' PELO NOME CORRETO DO SEU ARQUIVO */
-  background-image: url('images/fundo-linhas.svg');
+  background-image: url('images/background-desktop.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
