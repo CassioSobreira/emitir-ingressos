@@ -13,6 +13,7 @@
 
 /* Reset básico e estilos do body */
 * {
+  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -37,6 +38,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   padding: 20px;
+  overflow-x: hidden;
 }
 
 /* Estilos de Tipografia */
