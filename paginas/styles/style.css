@@ -243,3 +243,30 @@ main {
     object-fit: cover;
     border-radius: 50%;
 }
+/* ============================================= */
+/* RODAPÉ                                        */
+/* ============================================= */
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 40px 0 20px 0; /* Espaçamento: 40px em cima, 20px embaixo */
+  margin-top: auto; /* Truque de Flexbox para empurrar o rodapé para o final da página */
+}
+
+footer p {
+  color: var(--cor-texto-secundario);
+  font-size: 0.9rem; /* Um pouco menor que o texto normal */
+}
+
+footer a {
+  color: var(--cor-principal-laranja); /* Usa a cor de destaque do projeto */
+  text-decoration: none; /* Remove o sublinhado padrão */
+  font-weight: 500;
+  transition: all 0.2s ease; /* Transição suave para o hover */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+  opacity: 0.8;
+}
