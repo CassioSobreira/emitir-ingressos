@@ -1,8 +1,5 @@
-/* ============================================= */
-/* GERAL E VARIÁVEIS                           */
-/* ============================================= */
-
-/* Define as cores principais para reutilizarmos */
+@import url(elementos.css);
+@import url(ingresso.css);
 :root {
   --cor-fundo-escuro: #100f1c;
   --cor-principal-laranja: #ff8a71;
@@ -23,13 +20,12 @@
 
 body {
   background-color: var(--cor-fundo-escuro);
-  /* SUBSTITUA 'fundo-linhas.svg' PELO NOME CORRETO DO SEU ARQUIVO */
-  background-image: url('images/background-desktop.png');
+  background-image: url('../images/background-desktop.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
-
+  position: relative;
   color: var(--cor-texto-principal);
   /* SUBSTITUA 'Sora' PELO NOME DA FONTE DO SEU ZIP */
   font-family: 'Sora', sans-serif;

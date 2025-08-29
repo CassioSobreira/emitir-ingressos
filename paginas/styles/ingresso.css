@@ -1,0 +1,122 @@
+main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.ticket-container {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 550px;
+}
+
+.ticket-container h2 {
+    margin-bottom: 16px;
+}
+
+.ticket {
+  display: flex;
+  height: 280px;
+  background: url(../images/pattern-ticket.svg);
+  border: 1px solid var(--cor-borda-ticket);
+  border-radius: 16px;
+  backdrop-filter: blur(10px); /* Efeito de vidro fosco */
+  -webkit-backdrop-filter: blur(10px); /* Para compatibilidade */
+  overflow: hidden; /* Garante que os cantos fiquem arredondados */
+}
+
+.ticket-main {
+  padding: 32px;
+  flex-grow: 1; /* Faz esta parte ocupar o máximo de espaço */
+}
+
+.ticket-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+}
+
+.ticket-header h3 {
+    font-size: 1.25rem;
+}
+
+.ticket-logo-icon {
+    width: 40px;
+}
+
+.ticket-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+  text-align: left;
+}
+
+.user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Deixa o avatar redondo */
+}
+
+.user-info h4 {
+  font-size: 1.5rem; /* 24px */
+}
+
+.ticket-stub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-left: 2px dashed var(--cor-borda-ticket);
+  writing-mode: vertical-rl; /* Deixa o texto na vertical */
+  transform: rotate(180deg); /* Corrige a orientação do texto vertical */
+  padding: 24px 0;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+#drop-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background-color: var(--cor-fundo-input);
+  border: 2px dashed var(--cor-borda-input);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+#drop-area-content img {
+    margin-bottom: 16px;
+}
+
+#drop-area-content p {
+    color: var(--cor-texto-principal);
+    font-weight: 500;
+}
+
+#drop-area-content span {
+    font-size: 0.8rem;
+    color: var(--cor-texto-secundario);
+    margin-top: 8px;
+}
+
+/* Estilo para quando um arquivo é arrastado sobre a área */
+#drop-area.drag-over {
+  border-style: solid;
+  background-color: rgba(122, 91, 222, 0.2); /* Um roxo para feedback visual */
+}
+
+/* Estilo para a pré-visualização da imagem */
+#image-preview {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
