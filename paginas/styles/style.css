@@ -13,7 +13,6 @@
 
 /* Reset básico e estilos do body */
 * {
-  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -29,7 +28,7 @@ body {
   position: relative;
   color: var(--cor-texto-principal);
   /* SUBSTITUA 'Sora' PELO NOME DA FONTE DO SEU ZIP */
-  font-family: 'Sora', sans-serif;
+  font-family: inconsolata , monospace;
 
   /* Layout Flexbox para centralizar tudo */
   display: flex;
