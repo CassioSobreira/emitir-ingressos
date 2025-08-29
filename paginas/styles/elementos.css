@@ -26,11 +26,11 @@
   z-index: -1;
 }
 .elementoInferioresquerdo {
-  position: absolute;
-  bottom: 0%;
-  left: 0%;
-  width: 50%;
-  height: 30%;
-  pointer-events: none;
-  z-index: -1;
+  display: block;
+    margin: 0; /* centralizado com espaço acima */
+    width: auto;
+    opacity: 0.5;
+    pointer-events: none;
+    position: static;
+    bottom: 0;
 }
